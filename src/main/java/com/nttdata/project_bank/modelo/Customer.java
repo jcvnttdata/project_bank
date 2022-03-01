@@ -4,14 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @AllArgsConstructor
 @Builder
-@Document
+@Document(collection = "customer")
 @NoArgsConstructor
 public class Customer {
-    int customer_id;
-    String customer_name;
+    @Id
+    private int id;
+
+    private String name;
+    private String lastName;
+    private String address;
 }
