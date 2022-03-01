@@ -7,20 +7,15 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.List;
-
 @Data
 @AllArgsConstructor
 @Builder
-@Document(collection = "customer")
+@Document(collection = "customer_type")
 @NoArgsConstructor
-public class Customer {
+public class CustomerType {
+
     @Id
     private int id;
 
-    private String name;
-    private String lastName;
-    private String address;
-
-    private List<CustomerType> type;
+    private String name_type;
 }
