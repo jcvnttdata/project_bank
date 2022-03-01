@@ -8,6 +8,6 @@ public interface CustomerService {
     void createCustomer(Customer e);
     Mono<Customer> findByCustomerId(Integer id);
     Flux<Customer> findAllCustomer();
-    Mono<Customer> updateCustomer(Customer e);
+    Mono<Customer> updateCustomer(Integer id,Customer e);
     Mono<Void> deleteCustomer(Integer id);
 }

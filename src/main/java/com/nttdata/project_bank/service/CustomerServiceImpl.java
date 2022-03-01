@@ -29,7 +29,7 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public Mono<Customer> updateCustomer(Customer e) {
+    public Mono<Customer> updateCustomer(Integer id, Customer e) {
         return customerRepository.save(e);
     }
 
